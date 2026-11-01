@@ -9,7 +9,7 @@ the input are returned as warnings next to the best possible tree.
 - `demo.html` — an extended demo: open or drop an `.html` file, see warnings with
   their positions, view the resulting JSON (exactly the text of the saved file, with
   syntax highlighting), switch whitespace handling, copy it or save it as `.json`.
-- Live demo: _link will be added after deployment_
+- Live demo: [_Deployment_](https://lalkazaurus.github.io/html2json/demo)
 
 ## Repository structure
 
