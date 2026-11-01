@@ -1,0 +1,15 @@
+<script>
+  // a fake closing tag in a string must not end the script
+  var a = "</scr" + "ipt>";
+  var b = "</scriptx>"; var c = 1 < 2 && 3 > 2;
+</ScRiPt   >
+<script><!--</script>
+<p>after script with comment opener</p>
+<scr<script>ipt>broken tag name</script>
+<style>p::before { content: "</div>"; }</style >
+<textarea>
+  <b>not bold</b> &amp; &lt;decoded&gt;
+</textarea
+>
+<title>A </ title> fake end</title>
+<textarea></textarea></textarea>

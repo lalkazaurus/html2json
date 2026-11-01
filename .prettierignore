@@ -1,0 +1,4 @@
+# The original page from the task stays byte-for-byte unchanged.
+index.html
+# Samples are test input: their exact bytes matter.
+html_samples/

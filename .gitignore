@@ -1,0 +1,16 @@
+# Dependencies (Prettier, if installed locally for formatting)
+node_modules/
+package-lock.json
+
+# Logs
+npm-debug.log*
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Archives made for submission
+*.zip

@@ -1,0 +1,6 @@
+AI tool: Claude (Anthropic), claude.ai
+
+Link to the full conversation (task analysis, design decisions, implementation, tests):
+https://claude.ai/share/bfbdf85b-21ed-40b0-b586-b9867bfce1ef
+
+An export of the same conversation is attached as claude_chat.pdf.

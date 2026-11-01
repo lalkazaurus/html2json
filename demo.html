@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Convert HTML into a JSON tree in the browser, without a DOM parser." />
+    <title>html2json — HTML to JSON converter</title>
+    <link rel="stylesheet" href="demo.css" />
+    <script src="html2json.js" defer></script>
+    <script src="demo.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand__mark" aria-hidden="true">&lt;/&gt;</span>
+        <div>
+          <h1 class="brand__title">html2json</h1>
+          <p class="brand__subtitle">HTML to JSON tree, parsed without a DOM parser</p>
+        </div>
+      </div>
+      <a class="topbar__link" href="index.html">Original task page</a>
+    </header>
+
+    <main class="layout">
+      <!-- Input -->
+      <section class="panel panel--input" aria-labelledby="input-title">
+        <div class="panel__head">
+          <h2 id="input-title" class="panel__title">Input HTML</h2>
+          <span class="panel__meta" id="input-meta">0 characters</span>
+        </div>
+
+        <div class="toolbar">
+          <label class="btn btn--ghost" for="file-input">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 16V4m0 0-4 4m4-4 4 4M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3" />
+            </svg>
+            Open file
+          </label>
+          <input
+            id="file-input"
+            class="visually-hidden"
+            type="file"
+            accept=".html,.htm,.xhtml,.txt,text/html,text/plain"
+          />
+          <span class="toolbar__divider" aria-hidden="true"></span>
+          <button class="btn btn--ghost" type="button" data-example="example1">Example 1</button>
+          <button class="btn btn--ghost" type="button" data-example="example2">Example 2</button>
+          <button class="btn btn--ghost" type="button" data-example="broken">Broken HTML</button>
+          <button class="btn btn--ghost toolbar__end" type="button" id="clear-button">Clear</button>
+        </div>
+
+        <div class="dropzone" id="dropzone">
+          <textarea
+            id="html-input"
+            class="code-input"
+            spellcheck="false"
+            autocomplete="off"
+            aria-label="HTML to convert"
+            placeholder="Paste HTML here, or drop an .html file onto this area"
+          ></textarea>
+          <div class="dropzone__overlay" aria-hidden="true">Drop the file to load it</div>
+        </div>
+
+        <div class="panel__foot">
+          <span class="file-name" id="file-name"></span>
+          <label
+            class="checkbox"
+            title="Keep line breaks and indentation between tags as text nodes (preserveWhitespace: true)"
+          >
+            <input type="checkbox" id="preserve-whitespace" />
+            Keep whitespace
+          </label>
+          <button class="btn btn--primary" type="button" id="convert-button">
+            <span class="btn__label" id="convert-label">Convert to JSON</span>
+            <span class="shortcut" aria-hidden="true"><kbd>Ctrl</kbd><kbd>Enter</kbd></span>
+          </button>
+        </div>
+      </section>
+
+      <!-- Warnings -->
+      <section class="panel panel--warnings" aria-labelledby="warnings-title">
+        <div class="panel__head">
+          <h2 id="warnings-title" class="panel__title">Warnings <span class="badge" id="warnings-count">0</span></h2>
+          <span class="panel__meta">click one to find it in the input</span>
+        </div>
+        <ol class="warnings" id="warnings-list"></ol>
+        <p class="empty" id="warnings-empty">No warnings. Convert some HTML to see problems found in it here.</p>
+      </section>
+
+      <!-- Output -->
+      <section class="panel panel--output" aria-labelledby="output-title">
+        <div class="panel__head">
+          <h2 id="output-title" class="panel__title">Result JSON</h2>
+          <span class="panel__meta" id="output-meta"></span>
+        </div>
+
+        <div class="toolbar">
+          <div class="stats" id="stats" aria-live="polite"></div>
+          <div class="toolbar__actions">
+            <button class="btn btn--ghost" type="button" id="copy-button" disabled>Copy</button>
+            <button class="btn btn--secondary" type="button" id="save-button" disabled>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 4v12m0 0-4-4m4 4 4-4M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3" />
+              </svg>
+              Save .json
+            </button>
+          </div>
+        </div>
+
+        <div class="viewer">
+          <pre class="json-view" id="json-view" aria-label="Result JSON" hidden></pre>
+          <p class="empty empty--center" id="output-empty">The JSON will appear here.</p>
+        </div>
+      </section>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>

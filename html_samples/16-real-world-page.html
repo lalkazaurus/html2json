@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pricing &mdash; Acme Cloud</title>
+  <link rel="preconnect" href="https://fonts.example.com" crossorigin>
+  <style>
+    :root { --brand: #3355ff; }
+    .card > h3::after { content: "\2192"; }
+  </style>
+  <script async src="https://analytics.example.com/tag.js?id=X-1&amp;v=2"></script>
+  <script type="application/ld+json">
+    { "@context": "https://schema.org", "@type": "Product", "name": "Acme <Cloud>" }
+  </script>
+</head>
+<body class="page page--pricing">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header role="banner">
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="/" aria-current="page">Home</a></li>
+        <li><a href="/docs">Docs</a></li>
+        <li><a href="/pricing">Pricing</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="main">
+    <h1>Simple pricing</h1>
+    <form action="/subscribe" method="post" novalidate>
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required placeholder="you@example.com">
+      <select name="plan">
+        <option value="free" selected>Free</option>
+        <option value="pro">Pro &ndash; $10/mo</option>
+      </select>
+      <button type="submit" disabled>Subscribe</button>
+    </form>
+    <table>
+      <caption>Plan comparison</caption>
+      <thead><tr><th scope="col">Feature</th><th>Free</th><th>Pro</th></tr></thead>
+      <tbody>
+        <tr><td>Projects</td><td>3</td><td>&infin;</td></tr>
+        <tr><td colspan="3"><em>Prices exclude VAT</em></td></tr>
+      </tbody>
+    </table>
+    <picture>
+      <source srcset="hero.avif" type="image/avif">
+      <img src="hero.jpg" alt="Dashboard screenshot" loading="lazy" width="1200" height="630">
+    </picture>
+    <template id="row-template"><tr><td class="name"></td></tr></template>
+    <details open><summary>FAQ</summary><p>Can I cancel? Yes.</p></details>
+  </main>
+  <footer>
+    <p><small>&copy; 2026 Acme. All rights reserved.</small></p>
+  </footer>
+  <noscript><img src="/pixel.gif" alt=""></noscript>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Title with &amp; entity and <b>tag-like</b> text</title>
+  <style>
+    a > span { color: red; }
+    /* </div> inside CSS is just text */
+  </style>
+  <script>
+    if (a < b && b > c) { console.log("<div>not a tag</div>"); }
+    const closing = "</scriptx>"; // not the real closing tag
+  </script>
+  <SCRIPT type="module">import x from "./x.js";</SCRIPT >
+</head>
+<body>
+  <textarea name="t">Raw <b>bold</b> stays text, &lt;entities&gt; are decoded</textarea>
+  <textarea/>
+  <script src="empty.js"></script>
+</body>
+</html>

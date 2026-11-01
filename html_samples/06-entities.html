@@ -1,0 +1,11 @@
+<p>Named: &amp; &lt; &gt; &quot; &apos; [&nbsp;] &copy;</p>
+<p>Typography: &mdash; &ndash; &hellip; &laquo;quotes&raquo; &ldquo;quotes&rdquo; &trade; &euro; &rarr;</p>
+<p>Numeric: &#169; &#xA9; &#XA9; &#128512; &#x1F600;</p>
+<p>Windows-1252 numbers: &#151; &#147;text&#148; &#128;</p>
+<p>No semicolon: numeric &#65 works, legacy &copy 2024 and &amp work, &mdash stays</p>
+<p>In attributes: <a href="?a=1&copy=2&lang=uk" title="&copy 2024">link</a></p>
+<p>Unknown: &notarealentity; &Mdash; stay as written</p>
+<p>Invalid code points: &#0; &#xD800; &#x110000; &#99999999999999999999;</p>
+<p>Double encoded: &amp;amp; becomes &amp;</p>
+<p>Prototype names: &constructor; &toString; &__proto__; stay as written</p>
+<p>Lone ampersands: AT&T, a & b, &, &#, &#x;</p>

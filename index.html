@@ -1,0 +1,69 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML to JSON</title>
+    <script src="html2json.js"></script>
+    <style>
+      h1 {
+        font-family: sans-serif
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .container {
+        display: flex;
+        width: 100%;
+        gap: 10px;
+      }
+
+      .field {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+      }
+
+      textarea {
+        width: 100%;
+        height: calc(100vh - 170px);
+        max-width: 100%;
+        white-space: pre;
+      }
+
+      .buttons {
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      button {
+        width: 150px;
+        height: 40px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Jito's Software Developer Intern "html2json" Test Task</h1>
+
+    <div class="container">
+      <div class="field">
+        <label for="html">Input for "html2json" conversion:</label>
+        <textarea id="html" placeholder="Enter your HTML"></textarea>
+      </div>
+      <div class="field">
+        <label for="json">Results of "html2json" conversion:</label>
+        <textarea disabled id="json" placeholder="Here will be output from your html2json function"></textarea>
+      </div>
+    </div>
+    <div class="buttons">
+      <button onclick="convertHtml2JsonAndSet()">Convert to JSON</button>
+      <button onclick="showExample1()">Input Example 1</button>
+      <button onclick="showExample2()">Input Example 2</button>
+    </div>
+  </body>
+</html>
+

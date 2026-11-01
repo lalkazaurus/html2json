@@ -1,0 +1,15 @@
+<!-- Every way an attribute can be written -->
+<div id="double" class='single' data-unquoted=plain-value hidden>quotes</div>
+<input type="checkbox" checked disabled value="">
+<a href="/search?q=a&amp;b=c" title="5 &gt; 3 &amp;&amp; 2 &lt; 4">entities in values</a>
+<p title="contains > inside the value" data-x='and " a double quote'>greater-than inside quotes</p>
+<span CLASS="Upper" DaTa-Mixed="KeepsValueCase">names are lowercased, values are not</span>
+<button class="first" class="second" type="button">duplicate: first wins</button>
+<div __proto__="not a prototype" constructor="ok" toString="ok" hasOwnProperty="ok">dangerous names</div>
+<img src = "spaces-around-equals.png"   alt =  "spaced" >
+<div data-empty= >value missing after equals</div>
+<div a=1/b=2>slash inside an unquoted value</div>
+<div a="1"b="2">no space between attributes</div>
+<div / title="stray slash">stray slash</div>
+<div data-json='{"key": "value", "list": [1, 2]}'>json in attribute</div>
+<p data-emoji="😀" data-cyrillic="привіт">non-ASCII values</p>
